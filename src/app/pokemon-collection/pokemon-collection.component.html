@@ -1,0 +1,16 @@
+<div>
+  <h1>Search Pokemon</h1>
+  <form>
+    <div class="form-group">
+      <label for="name">Pokemon Name</label>
+      <input type="text" class="form-control" id="name" required [(ngModel)]="searchName" name="name">
+    </div>
+
+    <button type="submit" class="btn btn-default" (click)="searchPokemon()">Submit</button>
+
+  </form>
+</div>
+
+<div *ngFor="let pok of this.pokemons">
+  <app-pokemon [id]="pok['id']" [name]="pok['name']" [type]="pok['type']" [image]="pok['image']"></app-pokemon>
+</div>
