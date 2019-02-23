@@ -13,7 +13,7 @@ export class PokemonComponent implements OnInit {
   @Input() type: Pokemon; 
   @Input() image: Pokemon; 
 
-  pokemon: Pokemon;
+  @Input() pokemon: Pokemon;
 
   constructor() { }
 

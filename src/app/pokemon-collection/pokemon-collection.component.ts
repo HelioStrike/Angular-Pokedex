@@ -28,7 +28,10 @@ export class PokemonCollectionComponent implements OnInit {
             "id": ddata["id"],
             "name": this.searchName,
             "type": type, 
-            "image": ddata["sprites"]["front_default"]
+            "image": ddata["sprites"]["front_default"],
+            "moves": ddata["moves"],
+            "height": ddata["height"],
+            "weight": ddata["weight"]
           }];
 
           this.service.savePokemonToDB(this.pokemons[0]);
@@ -43,9 +46,6 @@ export class PokemonCollectionComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.service.getAllPokemonFromDB().subscribe(data => {
-      this.pokemons = data;
-    });
   }
 
 }

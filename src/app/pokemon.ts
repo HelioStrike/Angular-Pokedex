@@ -3,4 +3,7 @@ export class Pokemon {
     name: string;
     type: string;
     image: string;
+    moves: any[];
+    height: number;
+    weight: number;
 }
