@@ -1,8 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Observable } from 'rxjs';
 import { Pokemon } from '../pokemon';
 import { PokemonService } from '../pokemon.service';
-import { defineBase } from '@angular/core/src/render3';
 
 @Component({
   selector: 'app-pokemon-collection',
